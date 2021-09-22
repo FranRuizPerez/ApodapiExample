@@ -8,6 +8,7 @@ enum ListModel {
         }
         struct ViewModel {
             let navigationTitle: String
+            let navigationAction: String
             let downloadedImages: [UIImage?]
         }
     }

@@ -12,6 +12,12 @@
 		CC0AC86C26FB3C19003233A7 /* ApodapiStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86B26FB3C19003233A7 /* ApodapiStorage.swift */; };
 		CC0AC86F26FB4484003233A7 /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86E26FB4484003233A7 /* PlanetCell.swift */; };
 		CC0AC87126FB448C003233A7 /* PlanetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC87026FB448C003233A7 /* PlanetCell.xib */; };
+		CC5F167C26FB73F6007D54FF /* AddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167626FB73F6007D54FF /* AddInteractor.swift */; };
+		CC5F167D26FB73F6007D54FF /* AddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167726FB73F6007D54FF /* AddPresenter.swift */; };
+		CC5F167E26FB73F6007D54FF /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167826FB73F6007D54FF /* AddModel.swift */; };
+		CC5F167F26FB73F6007D54FF /* AddRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167926FB73F6007D54FF /* AddRouter.swift */; };
+		CC5F168026FB73F6007D54FF /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F167A26FB73F6007D54FF /* AddView.storyboard */; };
+		CC5F168126FB73F6007D54FF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167B26FB73F6007D54FF /* AddViewController.swift */; };
 		CC60F5D726FB075200A86BCF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CC60F5D626FB075200A86BCF /* Alamofire */; };
 		CC60F5DA26FB077800A86BCF /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC60F5D926FB077800A86BCF /* AlamofireImage */; };
 		CC8F16FD26FB06A700135513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F16FC26FB06A700135513 /* AppDelegate.swift */; };
@@ -64,6 +70,12 @@
 		CC0AC86B26FB3C19003233A7 /* ApodapiStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiStorage.swift; sourceTree = "<group>"; };
 		CC0AC86E26FB4484003233A7 /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
 		CC0AC87026FB448C003233A7 /* PlanetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetCell.xib; sourceTree = "<group>"; };
+		CC5F167626FB73F6007D54FF /* AddInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInteractor.swift; sourceTree = "<group>"; };
+		CC5F167726FB73F6007D54FF /* AddPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPresenter.swift; sourceTree = "<group>"; };
+		CC5F167826FB73F6007D54FF /* AddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
+		CC5F167926FB73F6007D54FF /* AddRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouter.swift; sourceTree = "<group>"; };
+		CC5F167A26FB73F6007D54FF /* AddView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddView.storyboard; sourceTree = "<group>"; };
+		CC5F167B26FB73F6007D54FF /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		CC8F16F926FB06A700135513 /* ApodapiExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApodapiExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F16FC26FB06A700135513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8F16FE26FB06A700135513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +181,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CC5F167526FB7261007D54FF /* 3-AddScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CC5F167A26FB73F6007D54FF /* AddView.storyboard */,
+				CC5F167626FB73F6007D54FF /* AddInteractor.swift */,
+				CC5F167826FB73F6007D54FF /* AddModel.swift */,
+				CC5F167726FB73F6007D54FF /* AddPresenter.swift */,
+				CC5F167926FB73F6007D54FF /* AddRouter.swift */,
+				CC5F167B26FB73F6007D54FF /* AddViewController.swift */,
+			);
+			path = "3-AddScreen";
+			sourceTree = "<group>";
+		};
 		CC8F16F026FB06A700135513 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +251,7 @@
 				CCD783A526FB10E5001AF132 /* 0-LoadScreen */,
 				CCD783A626FB10FB001AF132 /* 1-ListScreen */,
 				CCD783A726FB1117001AF132 /* 2-DetailScreen */,
+				CC5F167526FB7261007D54FF /* 3-AddScreen */,
 			);
 			path = Operatives;
 			sourceTree = "<group>";
@@ -387,6 +413,7 @@
 				CC0AC87126FB448C003233A7 /* PlanetCell.xib in Resources */,
 				CCD783A926FB117B001AF132 /* ListView.storyboard in Resources */,
 				CCD783AB26FB1187001AF132 /* DetailView.storyboard in Resources */,
+				CC5F168026FB73F6007D54FF /* AddView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +439,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD783C626FB12BC001AF132 /* ListInteractor.swift in Sources */,
+				CC5F167E26FB73F6007D54FF /* AddModel.swift in Sources */,
+				CC5F168126FB73F6007D54FF /* AddViewController.swift in Sources */,
 				CCD783C826FB12BC001AF132 /* ListRouter.swift in Sources */,
 				CCD783C526FB12BC001AF132 /* ListPresenter.swift in Sources */,
 				CC8F170726FB06A700135513 /* ApodapiExample.xcdatamodeld in Sources */,
 				CCD783B126FB11FE001AF132 /* LoadPresenter.swift in Sources */,
+				CC5F167C26FB73F6007D54FF /* AddInteractor.swift in Sources */,
+				CC5F167D26FB73F6007D54FF /* AddPresenter.swift in Sources */,
 				CC0AC86A26FB3C0E003233A7 /* ApodapiModel.swift in Sources */,
 				CCD783BB26FB12B5001AF132 /* DetailPresenter.swift in Sources */,
 				CCD783BF26FB12B5001AF132 /* DetailRouter.swift in Sources */,
 				CCD783BE26FB12B5001AF132 /* DetailInteractor.swift in Sources */,
+				CC5F167F26FB73F6007D54FF /* AddRouter.swift in Sources */,
 				CC0AC86F26FB4484003233A7 /* PlanetCell.swift in Sources */,
 				CCD783C726FB12BC001AF132 /* ListModel.swift in Sources */,
 				CCD783AD26FB11EA001AF132 /* LoadInteractor.swift in Sources */,

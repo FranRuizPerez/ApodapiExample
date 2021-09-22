@@ -9,6 +9,7 @@ class ListPresenter: ListPresentationLogic {
 
     func presentSetup(response: ListModel.Setup.Response) {
         let viewModel = ListModel.Setup.ViewModel(navigationTitle: "Listado",
+                                                  navigationAction: "Añadir",
                                                   downloadedImages: response.downloadedImages)
         viewController?.displaySetup(viewModel: viewModel)
     }

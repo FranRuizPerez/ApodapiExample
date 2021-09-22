@@ -21,4 +21,15 @@ struct ApodapiModel {
             }
         }
     }
+
+    func downloadHDImage(completion: @escaping (UIImage?) -> Void) {
+        AF.request(hdurl).responseData { resp in
+            switch resp.result {
+            case .success(let data):
+                completion(UIImage(data: data))
+            case .failure(_):
+                completion(nil)
+            }
+        }
+    }
 }

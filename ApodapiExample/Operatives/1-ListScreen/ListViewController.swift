@@ -13,7 +13,7 @@ class ListViewController: UIViewController {
     var interactor: ListBusinessLogic?
     var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
-    var apodapiModels: [ApodapiModel] { router?.dataStore?.apodapiModels ?? [] }
+    var apodapiModels: [ApodapiModel] = []
     var downloadedImages: [UIImage?] = []
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -45,8 +45,8 @@ class ListViewController: UIViewController {
         setup()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc func addTapped() {
+        router?.routeToAdd()
     }
 }
 
@@ -79,10 +79,21 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         router?.routeToDetail(model: apodapiModels[indexPath.row])
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            apodapiModels.remove(at: indexPath.row)
+            downloadedImages.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        default: break
+        }
+    }
 }
 
 extension ListViewController: ListDisplayLogic {
     func setup() {
+        apodapiModels = router?.dataStore?.apodapiModels ?? []
         downloadedImages = [UIImage?](repeating: nil, count: apodapiModels.count)
 
         let request = ListModel.Setup.Request()
@@ -91,6 +102,10 @@ extension ListViewController: ListDisplayLogic {
 
     func displaySetup(viewModel: ListModel.Setup.ViewModel) {
         title = viewModel.navigationTitle
+
+        let add = UIBarButtonItem(title: viewModel.navigationAction, style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItems = [add]
+
         downloadedImages = viewModel.downloadedImages
         tableView?.reloadData()
     }

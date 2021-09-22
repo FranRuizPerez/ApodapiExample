@@ -2,6 +2,7 @@ import UIKit
 
 protocol ListRoutingLogic {
     func routeToDetail(model: ApodapiModel)
+    func routeToAdd()
 }
 
 protocol ListDataPassing {
@@ -20,11 +21,22 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
         }
     }
 
+    func routeToAdd() {
+        let sb = UIStoryboard(name: AddViewController.sbIdentifier, bundle: .main)
+        if let vc = sb.instantiateViewController(identifier: AddViewController.vcIdentifier) as? AddViewController {
+            navigateToAdd(source: viewController!, destination: vc)
+        }
+    }
+
     func passDataToDetail(source: ApodapiModel, destination: inout DetailDataStore) {
         destination.apodapiModel = source
     }
 
     func navigateToDetail(source: ListViewController, destination: DetailViewController) {
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
+
+    func navigateToAdd(source: ListViewController, destination: AddViewController) {
         source.navigationController?.pushViewController(destination, animated: true)
     }
 }
