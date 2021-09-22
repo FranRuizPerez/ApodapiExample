@@ -18,7 +18,6 @@
 		CC5F168026FB73F6007D54FF /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F167A26FB73F6007D54FF /* AddView.storyboard */; };
 		CC5F168126FB73F6007D54FF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167B26FB73F6007D54FF /* AddViewController.swift */; };
 		CC60F5D726FB075200A86BCF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CC60F5D626FB075200A86BCF /* Alamofire */; };
-		CC60F5DA26FB077800A86BCF /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC60F5D926FB077800A86BCF /* AlamofireImage */; };
 		CC8F16FD26FB06A700135513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F16FC26FB06A700135513 /* AppDelegate.swift */; };
 		CC8F16FF26FB06A700135513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F16FE26FB06A700135513 /* SceneDelegate.swift */; };
 		CC8F170726FB06A700135513 /* ApodapiExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC8F170526FB06A700135513 /* ApodapiExample.xcdatamodeld */; };
@@ -113,7 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC60F5D726FB075200A86BCF /* Alamofire in Frameworks */,
-				CC60F5DA26FB077800A86BCF /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +309,6 @@
 			name = ApodapiExample;
 			packageProductDependencies = (
 				CC60F5D626FB075200A86BCF /* Alamofire */,
-				CC60F5D926FB077800A86BCF /* AlamofireImage */,
 			);
 			productName = ApodapiExample;
 			productReference = CC8F16F926FB06A700135513 /* ApodapiExample.app */;
@@ -386,7 +383,6 @@
 			mainGroup = CC8F16F026FB06A700135513;
 			packageReferences = (
 				CC60F5D526FB075200A86BCF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CC60F5D826FB077800A86BCF /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = CC8F16FA26FB06A700135513 /* Products */;
 			projectDirPath = "";
@@ -784,14 +780,6 @@
 				minimumVersion = 5.4.4;
 			};
 		};
-		CC60F5D826FB077800A86BCF /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -799,11 +787,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC60F5D526FB075200A86BCF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		CC60F5D926FB077800A86BCF /* AlamofireImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CC60F5D826FB077800A86BCF /* XCRemoteSwiftPackageReference "AlamofireImage" */;
-			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
