@@ -4,6 +4,9 @@ protocol DetailDisplayLogic: AnyObject {
 }
 
 class DetailViewController: UIViewController {
+
+    static let sbIdentifier = "DetailView"
+    static let vcIdentifier = "DetailViewController"
     var interactor: DetailBusinessLogic?
     var router: (NSObjectProtocol & DetailRoutingLogic & DetailDataPassing)?
 

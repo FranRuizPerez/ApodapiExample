@@ -8,6 +8,8 @@ protocol ListDisplayLogic: AnyObject {
 class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView?
 
+    static let sbIdentifier = "ListView"
+    static let vcIdentifier = "ListViewController"
     var interactor: ListBusinessLogic?
     var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
@@ -73,6 +75,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
         return customCell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.routeToDetail(model: apodapiModels[indexPath.row])
+    }
 }
 
 extension ListViewController: ListDisplayLogic {
@@ -84,6 +90,7 @@ extension ListViewController: ListDisplayLogic {
     }
 
     func displaySetup(viewModel: ListModel.Setup.ViewModel) {
+        title = viewModel.navigationTitle
         downloadedImages = viewModel.downloadedImages
         tableView?.reloadData()
     }

@@ -11,6 +11,8 @@ class LoadViewController: UIViewController {
     @IBOutlet weak var actionLabel: UILabel?
     @IBOutlet weak var indicatorView: UIActivityIndicatorView?
 
+    static let sbIdentifier = "LoadView"
+    static let vcIdentifier = "LoadViewController"
     var interactor: LoadBusinessLogic?
     var router: (NSObjectProtocol & LoadRoutingLogic & LoadDataPassing)?
 

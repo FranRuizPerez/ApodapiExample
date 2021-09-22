@@ -1,6 +1,6 @@
 import UIKit
 
-@objc protocol DetailRoutingLogic {
+protocol DetailRoutingLogic {
 }
 
 protocol DetailDataPassing {

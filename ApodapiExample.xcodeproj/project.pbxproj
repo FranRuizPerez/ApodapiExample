@@ -20,8 +20,8 @@
 		CC8F170926FB06A800135513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8F170826FB06A800135513 /* Assets.xcassets */; };
 		CC8F171726FB06A800135513 /* ApodapiExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F171626FB06A800135513 /* ApodapiExampleTests.swift */; };
 		CC8F172226FB06A800135513 /* ApodapiExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */; };
-		CCD783A926FB117B001AF132 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783A826FB117B001AF132 /* List.storyboard */; };
-		CCD783AB26FB1187001AF132 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783AA26FB1187001AF132 /* Detail.storyboard */; };
+		CCD783A926FB117B001AF132 /* ListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783A826FB117B001AF132 /* ListView.storyboard */; };
+		CCD783AB26FB1187001AF132 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783AA26FB1187001AF132 /* DetailView.storyboard */; };
 		CCD783AD26FB11EA001AF132 /* LoadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */; };
 		CCD783AF26FB11F7001AF132 /* LoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783AE26FB11F7001AF132 /* LoadModel.swift */; };
 		CCD783B126FB11FE001AF132 /* LoadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B026FB11FE001AF132 /* LoadPresenter.swift */; };
@@ -37,7 +37,7 @@
 		CCD783C726FB12BC001AF132 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C226FB12BC001AF132 /* ListModel.swift */; };
 		CCD783C826FB12BC001AF132 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C326FB12BC001AF132 /* ListRouter.swift */; };
 		CCD783C926FB12BC001AF132 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C426FB12BC001AF132 /* ListViewController.swift */; };
-		CCD783CB26FB12EE001AF132 /* Load.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783CA26FB12EE001AF132 /* Load.storyboard */; };
+		CCD783CB26FB12EE001AF132 /* LoadView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783CA26FB12EE001AF132 /* LoadView.storyboard */; };
 		CCD783CD26FB12F9001AF132 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783CC26FB12F9001AF132 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +76,8 @@
 		CC8F171D26FB06A800135513 /* ApodapiExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApodapiExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiExampleUITests.swift; sourceTree = "<group>"; };
 		CC8F172326FB06A800135513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCD783A826FB117B001AF132 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
-		CCD783AA26FB1187001AF132 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		CCD783A826FB117B001AF132 /* ListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListView.storyboard; sourceTree = "<group>"; };
+		CCD783AA26FB1187001AF132 /* DetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
 		CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadInteractor.swift; sourceTree = "<group>"; };
 		CCD783AE26FB11F7001AF132 /* LoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadModel.swift; sourceTree = "<group>"; };
 		CCD783B026FB11FE001AF132 /* LoadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPresenter.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		CCD783C226FB12BC001AF132 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		CCD783C326FB12BC001AF132 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		CCD783C426FB12BC001AF132 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		CCD783CA26FB12EE001AF132 /* Load.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Load.storyboard; sourceTree = "<group>"; };
+		CCD783CA26FB12EE001AF132 /* LoadView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadView.storyboard; sourceTree = "<group>"; };
 		CCD783CC26FB12F9001AF132 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +233,7 @@
 		CCD783A526FB10E5001AF132 /* 0-LoadScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CCD783CA26FB12EE001AF132 /* Load.storyboard */,
+				CCD783CA26FB12EE001AF132 /* LoadView.storyboard */,
 				CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */,
 				CCD783AE26FB11F7001AF132 /* LoadModel.swift */,
 				CCD783B026FB11FE001AF132 /* LoadPresenter.swift */,
@@ -246,7 +246,7 @@
 		CCD783A626FB10FB001AF132 /* 1-ListScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CCD783A826FB117B001AF132 /* List.storyboard */,
+				CCD783A826FB117B001AF132 /* ListView.storyboard */,
 				CCD783C126FB12BC001AF132 /* ListInteractor.swift */,
 				CCD783C226FB12BC001AF132 /* ListModel.swift */,
 				CCD783C026FB12BC001AF132 /* ListPresenter.swift */,
@@ -260,7 +260,7 @@
 		CCD783A726FB1117001AF132 /* 2-DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CCD783AA26FB1187001AF132 /* Detail.storyboard */,
+				CCD783AA26FB1187001AF132 /* DetailView.storyboard */,
 				CCD783B926FB12B5001AF132 /* DetailInteractor.swift */,
 				CCD783B826FB12B5001AF132 /* DetailModel.swift */,
 				CCD783B626FB12B5001AF132 /* DetailPresenter.swift */,
@@ -383,10 +383,10 @@
 			files = (
 				CC8F170926FB06A800135513 /* Assets.xcassets in Resources */,
 				CCD783CD26FB12F9001AF132 /* Launch.storyboard in Resources */,
-				CCD783CB26FB12EE001AF132 /* Load.storyboard in Resources */,
+				CCD783CB26FB12EE001AF132 /* LoadView.storyboard in Resources */,
 				CC0AC87126FB448C003233A7 /* PlanetCell.xib in Resources */,
-				CCD783A926FB117B001AF132 /* List.storyboard in Resources */,
-				CCD783AB26FB1187001AF132 /* Detail.storyboard in Resources */,
+				CCD783A926FB117B001AF132 /* ListView.storyboard in Resources */,
+				CCD783AB26FB1187001AF132 /* DetailView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

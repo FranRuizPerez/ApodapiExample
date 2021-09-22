@@ -1,6 +1,6 @@
 import UIKit
 
-@objc protocol LoadRoutingLogic {
+protocol LoadRoutingLogic {
     func routeToList()
 }
 
@@ -13,8 +13,8 @@ class LoadRouter: NSObject, LoadRoutingLogic, LoadDataPassing {
     var dataStore: LoadDataStore?
 
     func routeToList() {
-        let sb = UIStoryboard(name: "List", bundle: .main)
-        if let vc = sb.instantiateViewController(identifier: "ListViewController") as? ListViewController, var ds = vc.router?.dataStore {
+        let sb = UIStoryboard(name: ListViewController.sbIdentifier, bundle: .main)
+        if let vc = sb.instantiateViewController(identifier: ListViewController.vcIdentifier) as? ListViewController, var ds = vc.router?.dataStore {
             passDataToList(source: dataStore!, destination: &ds)
             navigateToList(source: viewController!, destination: vc)
         }

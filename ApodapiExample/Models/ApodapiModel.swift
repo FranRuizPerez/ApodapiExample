@@ -2,14 +2,14 @@ import UIKit
 import Alamofire
 
 struct ApodapiModel {
-    let title: String
-    let description: String
-    let copyright: String
-    let date: String
-    let url: String
-    let hdurl: String
-    let mediaType: String
-    let apodSite: String
+    var title: String = ""
+    var description: String = ""
+    var copyright: String = ""
+    var date: String = ""
+    var url: String = ""
+    var hdurl: String = ""
+    var mediaType: String = ""
+    var apodSite: String = ""
 
     func downloadImage(completion: @escaping (UIImage?) -> Void) {
         AF.request(url).responseData { resp in

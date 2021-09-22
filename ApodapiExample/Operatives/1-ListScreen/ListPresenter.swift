@@ -8,7 +8,8 @@ class ListPresenter: ListPresentationLogic {
     weak var viewController: ListDisplayLogic?
 
     func presentSetup(response: ListModel.Setup.Response) {
-        let viewModel = ListModel.Setup.ViewModel(downloadedImages: response.downloadedImages)
+        let viewModel = ListModel.Setup.ViewModel(navigationTitle: "Listado",
+                                                  downloadedImages: response.downloadedImages)
         viewController?.displaySetup(viewModel: viewModel)
     }
 }
