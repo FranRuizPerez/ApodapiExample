@@ -1,6 +1,8 @@
 import UIKit
 
 protocol ListDisplayLogic: AnyObject {
+    func setup()
+    func displaySetup(viewModel: ListModel.Setup.ViewModel)
 }
 
 class ListViewController: UIViewController {
@@ -10,6 +12,7 @@ class ListViewController: UIViewController {
     var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
 
     var apodapiModels: [ApodapiModel] { router?.dataStore?.apodapiModels ?? [] }
+    var downloadedImages: [UIImage?] = []
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -37,11 +40,11 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        setup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
     }
 }
 
@@ -64,7 +67,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         var customCell = UITableViewCell()
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: PlanetCell.identifier) as? PlanetCell {
-            cell.setup(model: apodapiModels[indexPath.row])
+            cell.setup(model: apodapiModels[indexPath.row], image: downloadedImages[indexPath.row])
             customCell = cell
         }
 
@@ -73,4 +76,15 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ListViewController: ListDisplayLogic {
+    func setup() {
+        downloadedImages = [UIImage?](repeating: nil, count: apodapiModels.count)
+
+        let request = ListModel.Setup.Request()
+        interactor?.setup(request: request)
+    }
+
+    func displaySetup(viewModel: ListModel.Setup.ViewModel) {
+        downloadedImages = viewModel.downloadedImages
+        tableView?.reloadData()
+    }
 }

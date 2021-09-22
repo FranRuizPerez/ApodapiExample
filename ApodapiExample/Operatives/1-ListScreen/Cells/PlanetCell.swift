@@ -15,8 +15,13 @@ class PlanetCell: UITableViewCell {
         copyrightLabel?.text = ""
     }
 
-    func setup(model: ApodapiModel) {
-        picture?.image = UIImage(named: "Downloading")
+    func setup(model: ApodapiModel, image: UIImage?) {
+        if let image = image {
+            picture?.image = image
+        } else {
+            picture?.image = UIImage(named: "Downloading")
+        }
+
         titleLabel?.text = model.title
         dateLabel?.text = model.date
         copyrightLabel?.text = model.copyright
