@@ -8,11 +8,6 @@ class ApodapiExampleTests: XCTestCase {
     override func tearDownWithError() throws {
     }
 
-    func testExample() throws {
-    }
-
     func testPerformanceExample() throws {
-        self.measure {
-        }
     }
 }
