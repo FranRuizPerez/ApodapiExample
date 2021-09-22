@@ -8,6 +8,7 @@ enum DetailModel {
         }
         struct ViewModel {
             let navigationTitle: String
+            let navigationAction: String
             let titleLabel: String
             let descriptionLabel: String
             let dateLabel: String

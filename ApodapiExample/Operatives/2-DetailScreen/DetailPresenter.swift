@@ -10,6 +10,7 @@ class DetailPresenter: DetailPresentationLogic {
 
     func presentSetup(response: DetailModel.Setup.Response) {
         let viewModel = DetailModel.Setup.ViewModel(navigationTitle: response.model.title,
+                                                    navigationAction: "Editar",
                                                     titleLabel: response.model.title,
                                                     descriptionLabel: response.model.description,
                                                     dateLabel: response.model.date,

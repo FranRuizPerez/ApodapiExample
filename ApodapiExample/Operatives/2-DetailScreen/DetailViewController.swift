@@ -47,6 +47,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+
+    @objc func editTapped() {
+    }
 }
 
 extension DetailViewController: DetailDisplayLogic {
@@ -57,6 +60,10 @@ extension DetailViewController: DetailDisplayLogic {
 
     func displaySetup(viewModel: DetailModel.Setup.ViewModel) {
         title = viewModel.navigationTitle
+
+        let edit = UIBarButtonItem(title: viewModel.navigationAction, style: .plain, target: self, action: #selector(editTapped))
+        navigationItem.rightBarButtonItems = [edit]
+
         picture?.image = UIImage(named: "Downloading")
         indicatorView?.isHidden = false
         indicatorView?.startAnimating()

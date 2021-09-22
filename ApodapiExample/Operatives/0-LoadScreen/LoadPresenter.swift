@@ -11,7 +11,7 @@ class LoadPresenter: LoadPresentationLogic {
     func presentSetup(response: LoadModel.Setup.Response) {
         let viewModel = LoadModel.Setup.ViewModel(navigationTitle: "Recargar",
                                                   backgroundColor: UIColor(named: "AccentColor") ?? .white,
-                                                  actionTitle: "Descargando datos de APODAPI...",
+                                                  actionTitle: "Recuperando datos de APODAPI...",
                                                   actionColor: .white)
         viewController?.displaySetup(viewModel: viewModel)
     }
