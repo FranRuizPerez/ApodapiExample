@@ -1,8 +1,15 @@
-//
-//  File2.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+enum LoadModel {
+    enum Setup {
+        struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
+
+    enum DownloadData {
+        struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
+}

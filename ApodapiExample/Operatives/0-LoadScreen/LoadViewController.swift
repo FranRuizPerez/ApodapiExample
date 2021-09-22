@@ -1,8 +1,64 @@
-//
-//  File5.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+protocol LoadDisplayLogic: AnyObject {
+    func setup()
+    func displaySetup(viewModel: LoadModel.Setup.ViewModel)
+    func downloadData()
+    func displayDownloadData(viewModel: LoadModel.DownloadData.ViewModel)
+}
+
+class LoadViewController: UIViewController {
+    var interactor: LoadBusinessLogic?
+    var router: (NSObjectProtocol & LoadRoutingLogic & LoadDataPassing)?
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setupArch()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupArch()
+    }
+
+    private func setupArch() {
+        let viewController = self
+        let interactor = LoadInteractor()
+        let presenter = LoadPresenter()
+        let router = LoadRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+}
+
+extension LoadViewController: LoadDisplayLogic {
+    func setup() {
+        print("SETUP")
+        let request = LoadModel.Setup.Request()
+        interactor?.setup(request: request)
+    }
+
+    func displaySetup(viewModel: LoadModel.Setup.ViewModel) {
+        print("DISPLAY SETUP")
+        downloadData()
+    }
+
+    func downloadData() {
+        print("DOWNLOAD")
+        let request = LoadModel.DownloadData.Request()
+        interactor?.downloadData(request: request)
+    }
+
+    func displayDownloadData(viewModel: LoadModel.DownloadData.ViewModel) {
+        print("DISPLAY DOWNLOAD")
+    }
+}
