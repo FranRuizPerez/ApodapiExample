@@ -25,4 +25,29 @@ enum DetailModel {
             let downloadedImage: UIImage?
         }
     }
+
+    enum EditData {
+        struct Request { }
+        struct Response { }
+        struct ViewModel {
+            let navigationAction: String
+        }
+    }
+
+    enum SaveData {
+        struct Request {
+            let title: String
+            let description: String
+            let date: String
+            let copyright: String
+        }
+        struct Response {
+            let index: Int
+            let model: ApodapiModel
+        }
+        struct ViewModel {
+            let index: Int
+            let model: ApodapiModel
+        }
+    }
 }

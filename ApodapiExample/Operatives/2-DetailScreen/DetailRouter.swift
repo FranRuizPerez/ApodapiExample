@@ -1,6 +1,7 @@
 import UIKit
 
 protocol DetailRoutingLogic {
+    func routeToBack()
 }
 
 protocol DetailDataPassing {
@@ -10,4 +11,8 @@ protocol DetailDataPassing {
 class DetailRouter: NSObject, DetailRoutingLogic, DetailDataPassing {
     weak var viewController: DetailViewController?
     var dataStore: DetailDataStore?
+
+    func routeToBack() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
 }

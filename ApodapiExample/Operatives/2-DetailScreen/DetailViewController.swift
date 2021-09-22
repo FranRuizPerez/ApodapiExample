@@ -1,19 +1,27 @@
 import UIKit
 
+protocol DetailViewControllerDelegate: AnyObject {
+    func editPlanet(index: Int, model: ApodapiModel)
+}
+
 protocol DetailDisplayLogic: AnyObject {
     func setup()
     func displaySetup(viewModel: DetailModel.Setup.ViewModel)
     func downloadData()
     func dispayDownloadData(viewModel: DetailModel.DownloadData.ViewModel)
+    func displayEditData(viewModel: DetailModel.EditData.ViewModel)
+    func displaySaveData(viewModel: DetailModel.SaveData.ViewModel)
 }
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var picture: UIImageView?
     @IBOutlet weak var indicatorView: UIActivityIndicatorView?
-    @IBOutlet weak var titleLabel: UILabel?
-    @IBOutlet weak var descriptionLabel: UILabel?
-    @IBOutlet weak var dateLabel: UILabel?
-    @IBOutlet weak var copyrightLabel: UILabel?
+    @IBOutlet weak var titleLabel: UITextField?
+    @IBOutlet weak var descriptionLabel: UITextView?
+    @IBOutlet weak var dateLabel: UITextField?
+    @IBOutlet weak var copyrightLabel: UITextField?
+
+    weak var delegate: DetailViewControllerDelegate?
 
     static let sbIdentifier = "DetailView"
     static let vcIdentifier = "DetailViewController"
@@ -49,11 +57,28 @@ class DetailViewController: UIViewController {
     }
 
     @objc func editTapped() {
+        let request = DetailModel.EditData.Request()
+        interactor?.editData(request: request)
+    }
+
+    @objc func saveTapped() {
+        let title = titleLabel?.text ?? ""
+        let description = descriptionLabel?.text ?? ""
+        let date = dateLabel?.text ?? ""
+        let copyright = copyrightLabel?.text ?? ""
+
+        let request = DetailModel.SaveData.Request(title: title, description: description, date: date, copyright: copyright)
+        interactor?.saveData(request: request)
     }
 }
 
 extension DetailViewController: DetailDisplayLogic {
     func setup() {
+        titleLabel?.isEnabled = false
+        descriptionLabel?.isEditable = false
+        dateLabel?.isEnabled = false
+        copyrightLabel?.isEnabled = false
+
         let request = DetailModel.Setup.Request()
         interactor?.setup(request: request)
     }
@@ -83,5 +108,26 @@ extension DetailViewController: DetailDisplayLogic {
         indicatorView?.stopAnimating()
         indicatorView?.isHidden = true
         picture?.image = viewModel.downloadedImage
+    }
+
+    func displayEditData(viewModel: DetailModel.EditData.ViewModel) {
+        titleLabel?.isEnabled = true
+        descriptionLabel?.isEditable = true
+        dateLabel?.isEnabled = true
+        copyrightLabel?.isEnabled = true
+
+        titleLabel?.borderStyle = .bezel
+        descriptionLabel?.layer.borderWidth = 2.0
+        descriptionLabel?.layer.borderColor = UIColor.gray.cgColor
+        dateLabel?.borderStyle = .bezel
+        copyrightLabel?.borderStyle = .bezel
+
+        let edit = UIBarButtonItem(title: viewModel.navigationAction, style: .plain, target: self, action: #selector(saveTapped))
+        navigationItem.rightBarButtonItems = [edit]
+    }
+
+    func displaySaveData(viewModel: DetailModel.SaveData.ViewModel) {
+        delegate?.editPlanet(index: viewModel.index, model: viewModel.model)
+        router?.routeToBack()
     }
 }

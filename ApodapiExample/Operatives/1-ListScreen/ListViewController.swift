@@ -77,7 +77,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router?.routeToDetail(model: apodapiModels[indexPath.row])
+        router?.routeToDetail(index: indexPath.row, model: apodapiModels[indexPath.row])
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -107,6 +107,13 @@ extension ListViewController: ListDisplayLogic {
         navigationItem.rightBarButtonItems = [add]
 
         downloadedImages = viewModel.downloadedImages
+        tableView?.reloadData()
+    }
+}
+
+extension ListViewController: DetailViewControllerDelegate {
+    func editPlanet(index: Int, model: ApodapiModel) {
+        apodapiModels[index] = model
         tableView?.reloadData()
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 protocol ListRoutingLogic {
-    func routeToDetail(model: ApodapiModel)
+    func routeToDetail(index: Int, model: ApodapiModel)
     func routeToAdd()
 }
 
@@ -13,10 +13,11 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
     weak var viewController: ListViewController?
     var dataStore: ListDataStore?
 
-    func routeToDetail(model: ApodapiModel) {
+    func routeToDetail(index: Int, model: ApodapiModel) {
         let sb = UIStoryboard(name: DetailViewController.sbIdentifier, bundle: .main)
         if let vc = sb.instantiateViewController(identifier: DetailViewController.vcIdentifier) as? DetailViewController, var ds = vc.router?.dataStore {
-            passDataToDetail(source: model, destination: &ds)
+            vc.delegate = viewController
+            passDataToDetail(index: index, source: model, destination: &ds)
             navigateToDetail(source: viewController!, destination: vc)
         }
     }
@@ -29,7 +30,8 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
         }
     }
 
-    func passDataToDetail(source: ApodapiModel, destination: inout DetailDataStore) {
+    func passDataToDetail(index: Int, source: ApodapiModel, destination: inout DetailDataStore) {
+        destination.indexModel = index
         destination.apodapiModel = source
     }
 
