@@ -110,3 +110,11 @@ extension ListViewController: ListDisplayLogic {
         tableView?.reloadData()
     }
 }
+
+extension ListViewController: AddViewControllerDelegate {
+    func addPlanet(model: ApodapiModel) {
+        apodapiModels.insert(model, at: 0)
+        downloadedImages.insert(nil, at: 0)
+        tableView?.reloadData()
+    }
+}

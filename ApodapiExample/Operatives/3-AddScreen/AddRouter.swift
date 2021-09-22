@@ -1,6 +1,7 @@
 import UIKit
 
 protocol AddRoutingLogic {
+    func routeToBack()
 }
 
 protocol AddDataPassing {
@@ -10,4 +11,8 @@ protocol AddDataPassing {
 class AddRouter: NSObject, AddRoutingLogic, AddDataPassing {
     weak var viewController: AddViewController?
     var dataStore: AddDataStore?
+
+    func routeToBack() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
 }

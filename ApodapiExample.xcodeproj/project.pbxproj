@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC0AC86826FB3B45003233A7 /* ApodapiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86726FB3B45003233A7 /* ApodapiParser.swift */; };
 		CC0AC86A26FB3C0E003233A7 /* ApodapiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86926FB3C0E003233A7 /* ApodapiModel.swift */; };
-		CC0AC86C26FB3C19003233A7 /* ApodapiStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86B26FB3C19003233A7 /* ApodapiStorage.swift */; };
 		CC0AC86F26FB4484003233A7 /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC86E26FB4484003233A7 /* PlanetCell.swift */; };
 		CC0AC87126FB448C003233A7 /* PlanetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC87026FB448C003233A7 /* PlanetCell.xib */; };
 		CC5F167C26FB73F6007D54FF /* AddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F167626FB73F6007D54FF /* AddInteractor.swift */; };
@@ -67,7 +66,6 @@
 /* Begin PBXFileReference section */
 		CC0AC86726FB3B45003233A7 /* ApodapiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiParser.swift; sourceTree = "<group>"; };
 		CC0AC86926FB3C0E003233A7 /* ApodapiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiModel.swift; sourceTree = "<group>"; };
-		CC0AC86B26FB3C19003233A7 /* ApodapiStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiStorage.swift; sourceTree = "<group>"; };
 		CC0AC86E26FB4484003233A7 /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
 		CC0AC87026FB448C003233A7 /* PlanetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetCell.xib; sourceTree = "<group>"; };
 		CC5F167626FB73F6007D54FF /* AddInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInteractor.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			children = (
 				CC0AC86926FB3C0E003233A7 /* ApodapiModel.swift */,
 				CC0AC86726FB3B45003233A7 /* ApodapiParser.swift */,
-				CC0AC86B26FB3C19003233A7 /* ApodapiStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				CC8F16FF26FB06A700135513 /* SceneDelegate.swift in Sources */,
 				CCD783BC26FB12B5001AF132 /* DetailViewController.swift in Sources */,
 				CCD783C926FB12BC001AF132 /* ListViewController.swift in Sources */,
-				CC0AC86C26FB3C19003233A7 /* ApodapiStorage.swift in Sources */,
 				CCD783AF26FB11F7001AF132 /* LoadModel.swift in Sources */,
 				CCD783BD26FB12B5001AF132 /* DetailModel.swift in Sources */,
 				CC0AC86826FB3B45003233A7 /* ApodapiParser.swift in Sources */,

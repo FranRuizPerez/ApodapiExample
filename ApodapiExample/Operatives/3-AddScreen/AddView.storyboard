@@ -15,9 +15,96 @@
                     <view key="view" contentMode="scaleToFill" id="Mxw-ta-dKi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="77X-vB-jwL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jl-Gu-fhg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="mercuryClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="tuM-Fy-Bh9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-hj-t7g">
+                                        <rect key="frame" x="0.0" y="91" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="venusClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="8MM-7b-mOf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-0j-qGa">
+                                        <rect key="frame" x="0.0" y="182" width="414" height="90.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="earthClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="Yt0-bq-RaJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-9e-7GM">
+                                        <rect key="frame" x="0.0" y="272.5" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="marsClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="vOa-wu-GWl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12r-v5-m2d">
+                                        <rect key="frame" x="0.0" y="363.5" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="jupiterClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="OMC-pC-MGv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w41-Nk-D34">
+                                        <rect key="frame" x="0.0" y="454.5" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="saturnClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="WSN-XU-zRH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5R-J7-H6j">
+                                        <rect key="frame" x="0.0" y="545.5" width="414" height="90.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="uranusClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="Rbm-MH-WCq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AV-Cv-J6o">
+                                        <rect key="frame" x="0.0" y="636" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="neptuneClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="Mq3-0d-jg9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-1C-6SA">
+                                        <rect key="frame" x="0.0" y="727" width="414" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="plutoClick:" destination="grZ-Nu-8el" eventType="touchUpInside" id="rv0-Ye-AzY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Eun-ab-YaT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="77X-vB-jwL" firstAttribute="leading" secondItem="Eun-ab-YaT" secondAttribute="leading" id="5AN-Gr-WRv"/>
+                            <constraint firstItem="77X-vB-jwL" firstAttribute="top" secondItem="Eun-ab-YaT" secondAttribute="top" id="HtZ-sG-d6W"/>
+                            <constraint firstItem="Eun-ab-YaT" firstAttribute="bottom" secondItem="77X-vB-jwL" secondAttribute="bottom" id="eyJ-OM-s2x"/>
+                            <constraint firstItem="Eun-ab-YaT" firstAttribute="trailing" secondItem="77X-vB-jwL" secondAttribute="trailing" id="fWb-up-VKU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="earthButton" destination="Zqb-0j-qGa" id="FJJ-0d-xyr"/>
+                        <outlet property="jupiterButton" destination="12r-v5-m2d" id="MLu-yG-yZs"/>
+                        <outlet property="marsButton" destination="qpY-9e-7GM" id="ZUW-AE-pZZ"/>
+                        <outlet property="mercuryButton" destination="4Jl-Gu-fhg" id="hb5-oQ-swi"/>
+                        <outlet property="neptuneButton" destination="2AV-Cv-J6o" id="lVt-MC-y3H"/>
+                        <outlet property="plutoButton" destination="2py-1C-6SA" id="pag-Ga-qHp"/>
+                        <outlet property="saturnButton" destination="w41-Nk-D34" id="RNQ-D1-IEN"/>
+                        <outlet property="uranusButton" destination="z5R-J7-H6j" id="EpF-2A-ctQ"/>
+                        <outlet property="venusButton" destination="XgG-hj-t7g" id="S0K-MO-cuR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2V1-I9-fgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

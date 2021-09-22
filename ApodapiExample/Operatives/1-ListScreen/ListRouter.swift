@@ -24,6 +24,7 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
     func routeToAdd() {
         let sb = UIStoryboard(name: AddViewController.sbIdentifier, bundle: .main)
         if let vc = sb.instantiateViewController(identifier: AddViewController.vcIdentifier) as? AddViewController {
+            vc.delegate = viewController
             navigateToAdd(source: viewController!, destination: vc)
         }
     }
