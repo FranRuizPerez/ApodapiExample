@@ -1,8 +1,15 @@
-//
-//  File.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
+import Alamofire
 
-import Foundation
+protocol ListBusinessLogic {
+}
+
+protocol ListDataStore {
+    var apodapiModels: [ApodapiModel] { get set }
+}
+
+class ListInteractor: ListBusinessLogic, ListDataStore {
+    var presenter: ListPresentationLogic?
+
+    var apodapiModels: [ApodapiModel] = []
+}

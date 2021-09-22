@@ -21,10 +21,10 @@ class LoadInteractor: LoadBusinessLogic, LoadDataStore {
     }
 
     func downloadData(request: LoadModel.DownloadData.Request) {
-        AF.request("https://apodapi.herokuapp.com/search/?search_query=planets&number=100").responseJSON { [weak self] result in
+        AF.request("https://apodapi.herokuapp.com/search/?search_query=planets&number=100").responseJSON { [weak self] resp in
             guard let self = self else { return }
 
-            switch result.result {
+            switch resp.result {
             case .success(let json):
                 if let elements = json as? [Any] {
                     elements.forEach { element in

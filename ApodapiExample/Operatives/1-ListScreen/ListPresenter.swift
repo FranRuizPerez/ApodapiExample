@@ -1,8 +1,8 @@
-//
-//  File3.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+protocol ListPresentationLogic {
+}
+
+class ListPresenter: ListPresentationLogic {
+    weak var viewController: ListDisplayLogic?
+}

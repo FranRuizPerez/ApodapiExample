@@ -9,7 +9,7 @@ class LoadPresenter: LoadPresentationLogic {
     weak var viewController: LoadDisplayLogic?
 
     func presentSetup(response: LoadModel.Setup.Response) {
-        let viewModel = LoadModel.Setup.ViewModel(navigationTitle: "Carga de Datos",
+        let viewModel = LoadModel.Setup.ViewModel(navigationTitle: "Recargar",
                                                   backgroundColor: UIColor(named: "AccentColor") ?? .white,
                                                   actionTitle: "Descargando datos de APODAPI...",
                                                   actionColor: .white)

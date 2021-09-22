@@ -1,8 +1,13 @@
-//
-//  File4.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+@objc protocol ListRoutingLogic {
+}
+
+protocol ListDataPassing {
+    var dataStore: ListDataStore? { get }
+}
+
+class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
+    weak var viewController: ListViewController?
+    var dataStore: ListDataStore?
+}

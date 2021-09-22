@@ -13,15 +13,18 @@ class LoadRouter: NSObject, LoadRoutingLogic, LoadDataPassing {
     var dataStore: LoadDataStore?
 
     func routeToList() {
-        //passDataToListOrders(source: dataStore!, destination: &destinationDS)
-        //navigateToListOrders(source: viewController!, destination: destinationVC)
+        let sb = UIStoryboard(name: "List", bundle: .main)
+        if let vc = sb.instantiateViewController(identifier: "ListViewController") as? ListViewController, var ds = vc.router?.dataStore {
+            passDataToList(source: dataStore!, destination: &ds)
+            navigateToList(source: viewController!, destination: vc)
+        }
     }
-    /*
+
     func passDataToList(source: LoadDataStore, destination: inout ListDataStore) {
+        destination.apodapiModels = source.apodapiModels
     }
 
     func navigateToList(source: LoadViewController, destination: ListViewController) {
         source.navigationController?.pushViewController(destination, animated: true)
     }
-    */
 }

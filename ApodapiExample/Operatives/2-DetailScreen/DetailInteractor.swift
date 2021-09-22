@@ -1,8 +1,12 @@
-//
-//  File.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
+import Alamofire
 
-import Foundation
+protocol DetailBusinessLogic {
+}
+
+protocol DetailDataStore {
+}
+
+class DetailInteractor: DetailBusinessLogic, DetailDataStore {
+    var presenter: DetailPresentationLogic?
+}

@@ -1,8 +1,8 @@
-//
-//  File3.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+protocol DetailPresentationLogic {
+}
+
+class DetailPresenter: DetailPresentationLogic {
+    weak var viewController: DetailDisplayLogic?
+}

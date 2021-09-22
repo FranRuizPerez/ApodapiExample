@@ -1,8 +1,13 @@
-//
-//  File4.swift
-//  ApodapiExample
-//
-//  Created by Develapps on 22/9/21.
-//
+import UIKit
 
-import Foundation
+@objc protocol DetailRoutingLogic {
+}
+
+protocol DetailDataPassing {
+    var dataStore: DetailDataStore? { get }
+}
+
+class DetailRouter: NSObject, DetailRoutingLogic, DetailDataPassing {
+    weak var viewController: DetailViewController?
+    var dataStore: DetailDataStore?
+}

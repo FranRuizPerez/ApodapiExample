@@ -37,8 +37,8 @@ class LoadViewController: UIViewController {
         router.dataStore = interactor
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setup()
     }
 }
@@ -64,6 +64,6 @@ extension LoadViewController: LoadDisplayLogic {
     }
 
     func displayDownloadData(viewModel: LoadModel.DownloadData.ViewModel) {
-        print("DISPLAY DOWNLOAD")
+        router?.routeToList()
     }
 }
