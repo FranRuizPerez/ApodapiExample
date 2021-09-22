@@ -16,7 +16,7 @@ Una vez todo preparado, automáticamente se abrirá una lista con los **planetas
 
 ## Mostrar Detalle de Planetas
 
-Cuando hacemos click en cualquiera de los **planetas** del listado obtendremos el detalle de los mismos, mostrando la imagen en su versión HD y descargándola de forma asíncrona y además de la misma manera, mostrando todos los datos del modelo correspondientes.
+Cuando hacemos click en cualquiera de los **planetas** del listado obtendremos el detalle de los mismos, mostrando la imagen en su versión HD y descargándola de forma asíncrona y además, mostrando todos los datos del modelo correspondientes.
 
 ## Editar Planetas
 
@@ -26,7 +26,7 @@ En la pantalla de detalle, podemos realizar la **Edición** y el **Guardado** pu
 
 En la pantalla de **Listado de Elementos**, en la parte superior de la barra de navegación nos aparece un botón de **Añadir** y que podemos utilizar para insertar **planetas predefinidos** en este caso de nuestro sistema solar.
 
-Para el caso del **Borrado** sólamente es necesario hacer el gesto **Swipe** hacia la izquierda y nos mostrará la opción correspondiente y **100% funcional** de este borrado de elementos.
+Para el caso del **Borrado**, en la pantalla de **Listado de Elementos** sólamente es necesario hacer el gesto **Swipe** hacia la izquierda y nos mostrará la opción correspondiente y **100% funcional** de este borrado de elementos.
 
 # Recarga de Datos: Mejora de la Funcionalidad
 
