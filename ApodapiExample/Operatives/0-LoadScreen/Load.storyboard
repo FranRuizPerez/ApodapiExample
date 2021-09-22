@@ -15,10 +15,32 @@
                     <view key="view" contentMode="scaleToFill" id="EzI-m8-ROG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4al-Dp-OXo">
+                                <rect key="frame" x="186" y="444.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-98-Gbm">
+                                <rect key="frame" x="188.5" y="476.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fdH-NK-RKu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4al-Dp-OXo" firstAttribute="centerX" secondItem="fdH-NK-RKu" secondAttribute="centerX" id="6N8-jO-gCe"/>
+                            <constraint firstItem="HJ9-98-Gbm" firstAttribute="centerY" secondItem="fdH-NK-RKu" secondAttribute="centerY" constant="20" id="wAi-ca-3O6"/>
+                            <constraint firstItem="4al-Dp-OXo" firstAttribute="centerY" secondItem="fdH-NK-RKu" secondAttribute="centerY" constant="-20" id="wea-33-Md3"/>
+                            <constraint firstItem="HJ9-98-Gbm" firstAttribute="centerX" secondItem="fdH-NK-RKu" secondAttribute="centerX" id="xO6-jO-gGg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m2M-iw-ucE"/>
+                    <connections>
+                        <outlet property="actionLabel" destination="4al-Dp-OXo" id="3Es-AJ-r4O"/>
+                        <outlet property="indicatorView" destination="HJ9-98-Gbm" id="8gv-LD-UNe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7Z-97-FAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

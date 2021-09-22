@@ -4,7 +4,12 @@ enum LoadModel {
     enum Setup {
         struct Request { }
         struct Response { }
-        struct ViewModel { }
+        struct ViewModel {
+            let navigationTitle: String
+            let backgroundColor: UIColor
+            let actionTitle: String
+            let actionColor: UIColor
+        }
     }
 
     enum DownloadData {

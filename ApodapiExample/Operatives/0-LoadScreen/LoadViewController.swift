@@ -8,6 +8,9 @@ protocol LoadDisplayLogic: AnyObject {
 }
 
 class LoadViewController: UIViewController {
+    @IBOutlet weak var actionLabel: UILabel?
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView?
+
     var interactor: LoadBusinessLogic?
     var router: (NSObjectProtocol & LoadRoutingLogic & LoadDataPassing)?
 
@@ -42,18 +45,20 @@ class LoadViewController: UIViewController {
 
 extension LoadViewController: LoadDisplayLogic {
     func setup() {
-        print("SETUP")
         let request = LoadModel.Setup.Request()
         interactor?.setup(request: request)
     }
 
     func displaySetup(viewModel: LoadModel.Setup.ViewModel) {
-        print("DISPLAY SETUP")
+        title = viewModel.navigationTitle
+        view.backgroundColor = viewModel.backgroundColor
+        actionLabel?.text = viewModel.actionTitle
+        actionLabel?.textColor = viewModel.actionColor
+        indicatorView?.startAnimating()
         downloadData()
     }
 
     func downloadData() {
-        print("DOWNLOAD")
         let request = LoadModel.DownloadData.Request()
         interactor?.downloadData(request: request)
     }
