@@ -11,12 +11,29 @@
 		CC60F5DA26FB077800A86BCF /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CC60F5D926FB077800A86BCF /* AlamofireImage */; };
 		CC8F16FD26FB06A700135513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F16FC26FB06A700135513 /* AppDelegate.swift */; };
 		CC8F16FF26FB06A700135513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F16FE26FB06A700135513 /* SceneDelegate.swift */; };
-		CC8F170426FB06A700135513 /* Apodapi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8F170226FB06A700135513 /* Apodapi.storyboard */; };
 		CC8F170726FB06A700135513 /* ApodapiExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC8F170526FB06A700135513 /* ApodapiExample.xcdatamodeld */; };
 		CC8F170926FB06A800135513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8F170826FB06A800135513 /* Assets.xcassets */; };
-		CC8F170C26FB06A800135513 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8F170A26FB06A800135513 /* Launch.storyboard */; };
 		CC8F171726FB06A800135513 /* ApodapiExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F171626FB06A800135513 /* ApodapiExampleTests.swift */; };
 		CC8F172226FB06A800135513 /* ApodapiExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */; };
+		CCD783A926FB117B001AF132 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783A826FB117B001AF132 /* List.storyboard */; };
+		CCD783AB26FB1187001AF132 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783AA26FB1187001AF132 /* Detail.storyboard */; };
+		CCD783AD26FB11EA001AF132 /* LoadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */; };
+		CCD783AF26FB11F7001AF132 /* LoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783AE26FB11F7001AF132 /* LoadModel.swift */; };
+		CCD783B126FB11FE001AF132 /* LoadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B026FB11FE001AF132 /* LoadPresenter.swift */; };
+		CCD783B326FB1206001AF132 /* LoadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B226FB1206001AF132 /* LoadRouter.swift */; };
+		CCD783B526FB120E001AF132 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B426FB120E001AF132 /* LoadViewController.swift */; };
+		CCD783BB26FB12B5001AF132 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B626FB12B5001AF132 /* DetailPresenter.swift */; };
+		CCD783BC26FB12B5001AF132 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B726FB12B5001AF132 /* DetailViewController.swift */; };
+		CCD783BD26FB12B5001AF132 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B826FB12B5001AF132 /* DetailModel.swift */; };
+		CCD783BE26FB12B5001AF132 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783B926FB12B5001AF132 /* DetailInteractor.swift */; };
+		CCD783BF26FB12B5001AF132 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783BA26FB12B5001AF132 /* DetailRouter.swift */; };
+		CCD783C526FB12BC001AF132 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C026FB12BC001AF132 /* ListPresenter.swift */; };
+		CCD783C626FB12BC001AF132 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C126FB12BC001AF132 /* ListInteractor.swift */; };
+		CCD783C726FB12BC001AF132 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C226FB12BC001AF132 /* ListModel.swift */; };
+		CCD783C826FB12BC001AF132 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C326FB12BC001AF132 /* ListRouter.swift */; };
+		CCD783C926FB12BC001AF132 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD783C426FB12BC001AF132 /* ListViewController.swift */; };
+		CCD783CB26FB12EE001AF132 /* Load.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783CA26FB12EE001AF132 /* Load.storyboard */; };
+		CCD783CD26FB12F9001AF132 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD783CC26FB12F9001AF132 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +57,8 @@
 		CC8F16F926FB06A700135513 /* ApodapiExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApodapiExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F16FC26FB06A700135513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8F16FE26FB06A700135513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC8F170326FB06A700135513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Apodapi.storyboard; sourceTree = "<group>"; };
 		CC8F170626FB06A700135513 /* ApodapiExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApodapiExample.xcdatamodel; sourceTree = "<group>"; };
 		CC8F170826FB06A800135513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC8F170B26FB06A800135513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		CC8F170D26FB06A800135513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8F171226FB06A800135513 /* ApodapiExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApodapiExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F171626FB06A800135513 /* ApodapiExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiExampleTests.swift; sourceTree = "<group>"; };
@@ -51,6 +66,25 @@
 		CC8F171D26FB06A800135513 /* ApodapiExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApodapiExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodapiExampleUITests.swift; sourceTree = "<group>"; };
 		CC8F172326FB06A800135513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD783A826FB117B001AF132 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		CCD783AA26FB1187001AF132 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadInteractor.swift; sourceTree = "<group>"; };
+		CCD783AE26FB11F7001AF132 /* LoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadModel.swift; sourceTree = "<group>"; };
+		CCD783B026FB11FE001AF132 /* LoadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPresenter.swift; sourceTree = "<group>"; };
+		CCD783B226FB1206001AF132 /* LoadRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRouter.swift; sourceTree = "<group>"; };
+		CCD783B426FB120E001AF132 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		CCD783B626FB12B5001AF132 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		CCD783B726FB12B5001AF132 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CCD783B826FB12B5001AF132 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		CCD783B926FB12B5001AF132 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		CCD783BA26FB12B5001AF132 /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		CCD783C026FB12BC001AF132 /* ListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		CCD783C126FB12BC001AF132 /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		CCD783C226FB12BC001AF132 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		CCD783C326FB12BC001AF132 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		CCD783C426FB12BC001AF132 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CCD783CA26FB12EE001AF132 /* Load.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Load.storyboard; sourceTree = "<group>"; };
+		CCD783CC26FB12F9001AF132 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +125,9 @@
 		CC18C55426FB0CDA00B565F3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CCD783CC26FB12F9001AF132 /* Launch.storyboard */,
 				CC8F16FC26FB06A700135513 /* AppDelegate.swift */,
 				CC8F16FE26FB06A700135513 /* SceneDelegate.swift */,
-				CC8F170226FB06A700135513 /* Apodapi.storyboard */,
-				CC8F170A26FB06A800135513 /* Launch.storyboard */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -130,10 +163,11 @@
 		CC8F16FB26FB06A700135513 /* ApodapiExample */ = {
 			isa = PBXGroup;
 			children = (
-				CC18C55526FB0CEC00B565F3 /* Resources */,
+				CC8F170D26FB06A800135513 /* Info.plist */,
 				CC18C55426FB0CDA00B565F3 /* Core */,
 				CC18C55326FB0CC200B565F3 /* CoreData */,
-				CC8F170D26FB06A800135513 /* Info.plist */,
+				CCD783A426FB10B8001AF132 /* Operatives */,
+				CC18C55526FB0CEC00B565F3 /* Resources */,
 			);
 			path = ApodapiExample;
 			sourceTree = "<group>";
@@ -141,8 +175,8 @@
 		CC8F171526FB06A800135513 /* ApodapiExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC8F171626FB06A800135513 /* ApodapiExampleTests.swift */,
 				CC8F171826FB06A800135513 /* Info.plist */,
+				CC8F171626FB06A800135513 /* ApodapiExampleTests.swift */,
 			);
 			path = ApodapiExampleTests;
 			sourceTree = "<group>";
@@ -150,10 +184,59 @@
 		CC8F172026FB06A800135513 /* ApodapiExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */,
 				CC8F172326FB06A800135513 /* Info.plist */,
+				CC8F172126FB06A800135513 /* ApodapiExampleUITests.swift */,
 			);
 			path = ApodapiExampleUITests;
+			sourceTree = "<group>";
+		};
+		CCD783A426FB10B8001AF132 /* Operatives */ = {
+			isa = PBXGroup;
+			children = (
+				CCD783A526FB10E5001AF132 /* 0-LoadScreen */,
+				CCD783A626FB10FB001AF132 /* 1-ListScreen */,
+				CCD783A726FB1117001AF132 /* 2-DetailScreen */,
+			);
+			path = Operatives;
+			sourceTree = "<group>";
+		};
+		CCD783A526FB10E5001AF132 /* 0-LoadScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CCD783CA26FB12EE001AF132 /* Load.storyboard */,
+				CCD783AC26FB11EA001AF132 /* LoadInteractor.swift */,
+				CCD783AE26FB11F7001AF132 /* LoadModel.swift */,
+				CCD783B026FB11FE001AF132 /* LoadPresenter.swift */,
+				CCD783B226FB1206001AF132 /* LoadRouter.swift */,
+				CCD783B426FB120E001AF132 /* LoadViewController.swift */,
+			);
+			path = "0-LoadScreen";
+			sourceTree = "<group>";
+		};
+		CCD783A626FB10FB001AF132 /* 1-ListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CCD783A826FB117B001AF132 /* List.storyboard */,
+				CCD783C126FB12BC001AF132 /* ListInteractor.swift */,
+				CCD783C226FB12BC001AF132 /* ListModel.swift */,
+				CCD783C026FB12BC001AF132 /* ListPresenter.swift */,
+				CCD783C326FB12BC001AF132 /* ListRouter.swift */,
+				CCD783C426FB12BC001AF132 /* ListViewController.swift */,
+			);
+			path = "1-ListScreen";
+			sourceTree = "<group>";
+		};
+		CCD783A726FB1117001AF132 /* 2-DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CCD783AA26FB1187001AF132 /* Detail.storyboard */,
+				CCD783B926FB12B5001AF132 /* DetailInteractor.swift */,
+				CCD783B826FB12B5001AF132 /* DetailModel.swift */,
+				CCD783B626FB12B5001AF132 /* DetailPresenter.swift */,
+				CCD783BA26FB12B5001AF132 /* DetailRouter.swift */,
+				CCD783B726FB12B5001AF132 /* DetailViewController.swift */,
+			);
+			path = "2-DetailScreen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +350,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8F170C26FB06A800135513 /* Launch.storyboard in Resources */,
 				CC8F170926FB06A800135513 /* Assets.xcassets in Resources */,
-				CC8F170426FB06A700135513 /* Apodapi.storyboard in Resources */,
+				CCD783CD26FB12F9001AF132 /* Launch.storyboard in Resources */,
+				CCD783CB26FB12EE001AF132 /* Load.storyboard in Resources */,
+				CCD783A926FB117B001AF132 /* List.storyboard in Resources */,
+				CCD783AB26FB1187001AF132 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +379,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD783C626FB12BC001AF132 /* ListInteractor.swift in Sources */,
+				CCD783C826FB12BC001AF132 /* ListRouter.swift in Sources */,
+				CCD783C526FB12BC001AF132 /* ListPresenter.swift in Sources */,
 				CC8F170726FB06A700135513 /* ApodapiExample.xcdatamodeld in Sources */,
+				CCD783B126FB11FE001AF132 /* LoadPresenter.swift in Sources */,
+				CCD783BB26FB12B5001AF132 /* DetailPresenter.swift in Sources */,
+				CCD783BF26FB12B5001AF132 /* DetailRouter.swift in Sources */,
+				CCD783BE26FB12B5001AF132 /* DetailInteractor.swift in Sources */,
+				CCD783C726FB12BC001AF132 /* ListModel.swift in Sources */,
+				CCD783AD26FB11EA001AF132 /* LoadInteractor.swift in Sources */,
+				CCD783B526FB120E001AF132 /* LoadViewController.swift in Sources */,
 				CC8F16FD26FB06A700135513 /* AppDelegate.swift in Sources */,
 				CC8F16FF26FB06A700135513 /* SceneDelegate.swift in Sources */,
+				CCD783BC26FB12B5001AF132 /* DetailViewController.swift in Sources */,
+				CCD783C926FB12BC001AF132 /* ListViewController.swift in Sources */,
+				CCD783AF26FB11F7001AF132 /* LoadModel.swift in Sources */,
+				CCD783BD26FB12B5001AF132 /* DetailModel.swift in Sources */,
+				CCD783B326FB1206001AF132 /* LoadRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,25 +430,6 @@
 			targetProxy = CC8F171E26FB06A800135513 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CC8F170226FB06A700135513 /* Apodapi.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC8F170326FB06A700135513 /* Base */,
-			);
-			name = Apodapi.storyboard;
-			sourceTree = "<group>";
-		};
-		CC8F170A26FB06A800135513 /* Launch.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC8F170B26FB06A800135513 /* Base */,
-			);
-			name = Launch.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CC8F172426FB06A800135513 /* Debug */ = {
